@@ -3,7 +3,12 @@ session_start();
 require_once('../model/model.php');
 
 //Récupération du nom d'utilisateur
-if (!isset) 
+if (!isset($_session["id"])) {
+
+    require_once("../view/listView.php");
+} else {
+    header("location: ../controller/home.php");
+}
 
 
 
@@ -11,3 +16,9 @@ if (!isset)
 
 
 require_once('../view/listView.php');
+
+$bdd=new Model();
+$bookList = $bdd->getAllBooks();
+
+
+?>

@@ -27,7 +27,7 @@ class Model {
      * @return Array
      */
     public function getEvents() {
-        $sqlQuery = "SELECT image, lieu, dsecription, difficulte, id FROM events";
+        $sqlQuery = "SELECT image, lieu, description, difficulte, id FROM events";
         $statement = $this->bdd->prepare($sqlQuery);
         $statement->execute();
         $req = $statement->fetchAll();
